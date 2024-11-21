@@ -9,7 +9,7 @@ public class Show {
 
     @Id
     @Field("show_id")
-    private Long showId;
+    private String showId;
 
     private String location;
     private String date;
@@ -25,11 +25,11 @@ public class Show {
         this.availableTickets = availableTickets;
     }
 
-    public Long getShowId() {
+    public String getShowId() {
         return showId;
     }
 
-    public void setShowId(Long showId) {
+    public void setShowId(String showId) {
         this.showId = showId;
     }
 

@@ -23,7 +23,7 @@ public class ShowService {
         return showRepository.findAll();
     }
 
-    public List<Show> buscaPorIdShow(Long idShow) {
+    public List<Show> buscaPorIdShow(String idShow) {
         return showRepository.findByShowId(idShow);
     }
 }

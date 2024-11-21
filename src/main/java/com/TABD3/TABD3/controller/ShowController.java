@@ -24,8 +24,9 @@ public class ShowController {
         return ResponseEntity.status(HttpStatus.CREATED).body(showService.salvar(show));
     }
 
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Show>> listarPorId(@PathVariable("id") Long id) {
-        return ResponseEntity.status(HttpStatus.OK).body(showService.buscaPorIdShow(id));
+    @GetMapping(value = "/{showId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Show>> listarPorId(@PathVariable("showId") String showId) {
+        return ResponseEntity.status(HttpStatus.OK).body(showService.buscaPorIdShow(showId));
+
     }
 }
